@@ -1,0 +1,16 @@
+{
+	"name": "Matma E8 – egzamin ósmoklasisty",
+	"short_name": "Matma E8",
+	"description": "Ćwiczenia z wyjaśnieniami, egzamin próbny i fiszki do egzaminu ósmoklasisty z matematyki.",
+	"lang": "pl",
+	"start_url": "./",
+	"scope": "./",
+	"display": "standalone",
+	"orientation": "portrait",
+	"background_color": "#f5f7fb",
+	"theme_color": "#2563eb",
+	"icons": [
+		{ "src": "ikona-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+		{ "src": "ikona-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+	]
+}
