@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Matma E8 – jak dodać na telefon</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#2563eb">
+<link rel="icon" href="ikona.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<style>
+/* Instrukcja: jedna kolumna, kroki jako numerowana lista, ikony systemowe narysowane w SVG obok kroków. */
+.instr h1{font-size:30px;margin:8px 0 4px;color:var(--acc)}
+.instr .wstep{color:var(--mut);margin:0 0 8px}
+.adres{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;padding:14px 16px;border-radius:var(--r);background:var(--acc-jasny);margin:16px 0}
+.adres code{font:700 17px/1.4 ui-monospace,Menlo,monospace;color:var(--acc);overflow-wrap:anywhere}
+.spis{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 4px}
+.spis a{padding:8px 14px;border-radius:99px;border:2px solid var(--linia);background:var(--karta);text-decoration:none;font-weight:600}
+.sekcja{margin-top:28px;padding:18px;border-radius:var(--r);background:var(--karta);border:1px solid var(--linia)}
+.sekcja h2{margin:0 0 4px}
+.sekcja>p{margin:4px 0 0;color:var(--mut)}
+.kroki{counter-reset:k;list-style:none;padding:0;margin:14px 0 0;display:grid;gap:12px}
+.kroki li{counter-increment:k;display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start}
+.kroki li::before{content:counter(k);display:grid;place-items:center;width:36px;height:36px;border-radius:12px;background:var(--acc);color:var(--acc-tx);font-weight:700}
+.kroki li>div{min-width:0}
+.ikona{display:inline-flex;vertical-align:middle;align-items:center;justify-content:center;width:30px;height:30px;border-radius:8px;border:1.5px solid var(--linia);background:var(--bg);margin:0 2px}
+.ikona svg{width:20px;height:20px;fill:none;stroke:var(--acc);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.przycisk{display:inline-block;padding:1px 8px;border-radius:6px;background:var(--acc-jasny);color:var(--acc);font-weight:700;white-space:nowrap}
+.rada{margin-top:12px;padding:10px 14px;border-left:5px solid var(--acc);background:var(--acc-jasny);border-radius:0 12px 12px 0}
+.problemy dt{font-weight:700;margin-top:14px}
+.problemy dd{margin:2px 0 0;color:var(--tx)}
+.stopka{color:var(--mut);font-size:15px;margin-top:28px}
+@media print{.spis{display:none}.sekcja{break-inside:avoid;border-color:#ccc}body{background:#fff}}
+</style>
+</head>
+<body>
+<main class="wrap instr">
+	<h1>Matma E8 na Twoim telefonie</h1>
+	<p class="wstep">Aplikacja do nauki przed egzaminem ósmoklasisty z matematyki. Dodasz ją do ekranu jak zwykłą aplikację. Zajmie to około minuty.</p>
+
+	<div class="adres"><span>Adres aplikacji:</span> <code>bartoszizydor.github.io/matma-e8</code></div>
+	<p>Hasło dostaniesz od nauczyciela. <b>Nie podawaj go nikomu spoza klasy.</b></p>
+
+	<nav class="spis" aria-label="Wybierz swój telefon">
+		<a href="#iphone">iPhone</a>
+		<a href="#android">Android</a>
+		<a href="#komputer">Komputer</a>
+		<a href="#problemy">Coś nie działa?</a>
+	</nav>
+
+	<section class="sekcja" id="iphone">
+		<h2>iPhone</h2>
+		<p>Użyj przeglądarki <b>Safari</b> (niebieski kompas). W innych przeglądarkach na iPhonie ten sposób może nie działać.</p>
+		<ol class="kroki">
+			<li><div>Otwórz <b>Safari</b> i wpisz adres <b>bartoszizydor.github.io/matma-e8</b>.</div></li>
+			<li><div>Wpisz <b>hasło od nauczyciela</b>. Zostaw zaznaczone <span class="przycisk">Zapamiętaj na tym urządzeniu</span> i stuknij <span class="przycisk">Wejdź</span>.</div></li>
+			<li><div>Stuknij przycisk <b>Udostępnij</b>
+				<span class="ikona" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 15V3M8 7l4-4 4 4"/><path d="M6 11H5v10h14V11h-1"/></svg></span>
+				(kwadrat ze strzałką w górę). Jeśli go nie widzisz, stuknij najpierw
+				<span class="ikona" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.4" fill="currentColor"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/><circle cx="19" cy="12" r="1.4" fill="currentColor"/></svg></span>
+				(trzy kropki na dole ekranu), a potem <b>Udostępnij</b>.</div></li>
+			<li><div>Przewiń listę w dół i wybierz <span class="przycisk">Do ekranu początkowego</span>.</div></li>
+			<li><div>Stuknij <span class="przycisk">Dodaj</span> w prawym górnym rogu.</div></li>
+			<li><div>Gotowe. Na ekranie telefonu jest niebieska ikona <b>Matma E8</b>. Od teraz otwieraj aplikację z tej ikony.</div></li>
+		</ol>
+	</section>
+
+	<section class="sekcja" id="android">
+		<h2>Android (Samsung, Xiaomi, Motorola i inne)</h2>
+		<p>Użyj przeglądarki <b>Chrome</b>.</p>
+		<ol class="kroki">
+			<li><div>Otwórz <b>Chrome</b> i wpisz adres <b>bartoszizydor.github.io/matma-e8</b>.</div></li>
+			<li><div>Wpisz <b>hasło od nauczyciela</b>. Zostaw zaznaczone <span class="przycisk">Zapamiętaj na tym urządzeniu</span> i stuknij <span class="przycisk">Wejdź</span>.</div></li>
+			<li><div>Stuknij <b>menu</b>
+				<span class="ikona" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.4" fill="currentColor"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/><circle cx="12" cy="19" r="1.4" fill="currentColor"/></svg></span>
+				(trzy kropki w prawym górnym rogu).</div></li>
+			<li><div>Wybierz <span class="przycisk">Zainstaluj aplikację</span> albo <span class="przycisk">Dodaj do ekranu głównego</span>. Nazwa zależy od telefonu.</div></li>
+			<li><div>Potwierdź: <span class="przycisk">Zainstaluj</span> albo <span class="przycisk">Dodaj</span>.</div></li>
+			<li><div>Gotowe. Ikona <b>Matma E8</b> jest na ekranie telefonu, czasem też na liście aplikacji.</div></li>
+		</ol>
+	</section>
+
+	<section class="sekcja" id="komputer">
+		<h2>Komputer</h2>
+		<p>Aplikacja działa też w przeglądarce na komputerze.</p>
+		<ol class="kroki">
+			<li><div>Otwórz <b>Chrome</b> albo <b>Edge</b> i wpisz adres <b>bartoszizydor.github.io/matma-e8</b>.</div></li>
+			<li><div>Wpisz hasło od nauczyciela i stuknij <span class="przycisk">Wejdź</span>.</div></li>
+			<li><div>Jeśli chcesz, kliknij ikonę instalacji
+				<span class="ikona" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M12 8v6M9 11l3 3 3-3M8 21h8"/></svg></span>
+				na końcu paska adresu. Wtedy aplikacja otworzy się w osobnym oknie. Możesz też po prostu dodać stronę do zakładek.</div></li>
+		</ol>
+	</section>
+
+	<section class="sekcja">
+		<h2>Od czego zacząć</h2>
+		<ol class="kroki">
+			<li><div><b>Wyzwanie dnia</b> na górze ekranu: 5 pytań, około 3 minut. Codziennie nowe. Rób je dzień po dniu, a Twoja seria będzie rosła.</div></li>
+			<li><div>Na dole ekranu ustaw <b>codzienne przypomnienie</b> o godzinie, która Ci pasuje.</div></li>
+			<li><div>Ćwicz <b>działy</b>, z którymi masz kłopot. Po każdej odpowiedzi zobaczysz wyjaśnienie.</div></li>
+			<li><div>W <b>fiszkach</b> przy „Jeszcze nie” jest przycisk z dokładnym wyjaśnieniem i przykładami.</div></li>
+		</ol>
+		<p class="rada">Nie ma limitu czasu. Pytania losują się za każdym razem od nowa, więc możesz ćwiczyć, ile chcesz.</p>
+	</section>
+
+	<section class="sekcja" id="problemy">
+		<h2>Coś nie działa?</h2>
+		<dl class="problemy">
+			<dt>„Nieprawidłowe hasło”</dt>
+			<dd>Sprawdź wielkie i małe litery. Jeśli nadal nie działa, zapytaj nauczyciela, czy hasło się nie zmieniło.</dd>
+			<dt>Aplikacja za każdym razem pyta o hasło</dt>
+			<dd>Zaznacz „Zapamiętaj na tym urządzeniu”. Nie używaj trybu prywatnego (incognito), bo wtedy przeglądarka nic nie zapamiętuje.</dd>
+			<dt>Na iPhonie nie ma „Do ekranu początkowego”</dt>
+			<dd>Otwórz adres w Safari, nie w innej przeglądarce ani w Messengerze czy Instagramie. Na liście po stuknięciu „Udostępnij” przewiń w dół.</dd>
+			<dt>Na Androidzie nie ma „Zainstaluj aplikację”</dt>
+			<dd>Otwórz adres w Chrome. Jeśli link otworzył się w innej aplikacji, wybierz „Otwórz w Chrome”.</dd>
+			<dt>Zniknęły moje wyniki i seria</dt>
+			<dd>Postęp zapisuje się tylko w Twoim telefonie. Wyczyszczenie danych przeglądarki albo zmiana telefonu go kasuje.</dd>
+			<dt>Nie mam internetu</dt>
+			<dd>Po pierwszym otwarciu aplikacja działa też bez internetu.</dd>
+		</dl>
+	</section>
+
+	<p class="stopka">Twoje wyniki zostają w Twoim telefonie. Aplikacja nie wysyła ich nigdzie.</p>
+</main>
+</body>
+</html>
