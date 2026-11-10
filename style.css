@@ -144,3 +144,37 @@ sup{line-height:0}
 .dane-ucznia input{font:inherit;padding:12px 14px;border-radius:12px;border:2px solid var(--linia);background:var(--karta);color:var(--tx)}
 .blad-danych{color:var(--zle)!important;font-weight:600;min-height:1.7em}
 .dane-ucznia input.litera{width:4.2em;text-align:center;text-transform:uppercase}
+
+/* Wyniki uczniów (nauczyciel) i kod ucznia */
+.klasa-nr{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:end}
+.klasa-nr span{display:grid;gap:6px}
+.dane-ucznia .kod{font:700 20px/1.2 ui-monospace,Menlo,monospace;letter-spacing:.15em;text-transform:uppercase}
+.nowy-kod{margin:16px 0;padding:16px;border-radius:var(--r);background:var(--acc-jasny);border:2px solid var(--acc)}
+.nowy-kod p{margin:4px 0}
+.kod-duzy{font:700 36px/1.2 ui-monospace,Menlo,monospace;letter-spacing:.2em;color:var(--acc)}
+.kod-maly{font:600 14px ui-monospace,Menlo,monospace;color:var(--mut);margin-left:6px}
+#dodaj{margin:24px 0 0}
+
+/* Ułatwienia: pasek pomocy przy pytaniu, okno z tabliczką/kalkulatorem/słowniczkiem */
+.pomoce{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 14px}
+.pomoce .btn{width:auto;margin:0;padding:8px 12px;font-size:15px}
+.okno{width:min(640px,calc(100vw - 32px));max-height:85vh;border:none;border-radius:var(--r);background:var(--bg);color:var(--tx);padding:16px}
+.okno::backdrop{background:rgb(0 0 0/.45)}
+.okno-gora{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:8px}
+.okno-gora h2{margin:0;font-size:22px}
+.okno-gora .btn{width:auto;padding:8px 14px}
+.tabliczka{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:15px}
+.tabliczka th,.tabliczka td{border:1px solid var(--linia);padding:4px 2px;text-align:center}
+.tabliczka th{background:var(--acc-jasny);color:var(--acc)}
+.tabliczka tr:nth-child(odd) td{background:var(--karta)}
+.kalkulator{display:grid;gap:8px;margin-top:16px}
+.kalkulator div{display:flex;gap:8px}
+.kalkulator input{flex:1;min-width:0;font:inherit;font-size:20px;padding:10px 12px;border-radius:12px;border:2px solid var(--linia);background:var(--karta);color:var(--tx)}
+.kalkulator .btn{width:auto;padding:10px 20px}
+#kalk-wynik{font-size:24px;font-weight:700;color:var(--acc);min-height:1.4em;margin:0}
+.slowniczek dt{font-weight:700;margin-top:12px}
+.slowniczek dt span{font-weight:400;color:var(--mut)}
+.slowniczek dd{margin:2px 0 0}
+.przelacznik{display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:var(--r);background:var(--karta);border:1px solid var(--linia);margin:12px 0}
+.przelacznik input{width:24px;height:24px;flex:none;margin-top:2px}
+.postep-wyniku{font-weight:700;color:var(--ok, var(--acc))}

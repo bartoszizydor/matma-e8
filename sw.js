@@ -1,5 +1,5 @@
 // Praca offline: najpierw sieć (poprawki docierają same), bez internetu pamięć podręczna.
-const WERSJA = 'matma-e8-v4';
+const WERSJA = 'matma-e8-v5';
 const PLIKI = ['./', 'index.html', 'style.css', 'manifest.webmanifest', 'ikona.svg', 'ikona-192.png', 'ikona-512.png'];
 
 self.addEventListener('install', e => e.waitUntil(caches.open(WERSJA).then(c => c.addAll(PLIKI)).then(() => self.skipWaiting())));
