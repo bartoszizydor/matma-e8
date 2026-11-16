@@ -178,3 +178,8 @@ sup{line-height:0}
 .przelacznik{display:flex;gap:12px;align-items:flex-start;padding:14px;border-radius:var(--r);background:var(--karta);border:1px solid var(--linia);margin:12px 0}
 .przelacznik input{width:24px;height:24px;flex:none;margin-top:2px}
 .postep-wyniku{font-weight:700;color:var(--ok, var(--acc))}
+
+.wybor{border:0;padding:0;margin:18px 0 0}
+.wybor legend{font-weight:700;font-size:18px;margin-bottom:4px}
+.wybor .przelacznik{margin:8px 0}
+.wybor .btn{width:auto}
