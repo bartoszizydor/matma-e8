@@ -183,3 +183,49 @@ sup{line-height:0}
 .wybor legend{font-weight:700;font-size:18px;margin-bottom:4px}
 .wybor .przelacznik{margin:8px 0}
 .wybor .btn{width:auto}
+
+/* Wygląd v2: miękkie cienie, kolorowe działy, nagłówek z logo, wynik w pierścieniu. Spokojnie – bez migania i ruchu przy reduced-motion. */
+:root{--cien:0 1px 2px rgb(20 33 61/.06),0 4px 14px rgb(20 33 61/.07);--acc2:#7c3aed}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--cien:0 1px 2px rgb(0 0 0/.4);--acc2:#a78bfa}}
+:root[data-theme="dark"]{--cien:0 1px 2px rgb(0 0 0/.4);--acc2:#a78bfa}
+
+.naglowek{display:flex;align-items:center;gap:14px;padding:12px 0 4px}
+.logo{flex:none;width:56px;height:56px;border-radius:16px;box-shadow:var(--cien)}
+.naglowek h1{font-size:30px;background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.naglowek p{line-height:1.4;font-size:16px}
+
+.kafel,.dzial,.opcja,.wyzwanie,.blad,.fiszka,.rozbicie li,.przelacznik{box-shadow:var(--cien)}
+.kafel,.dzial,.opcja,.wyzwanie,.btn{transition:transform .12s,border-color .15s,background-color .15s}
+.kafel:active,.dzial:active,.opcja:active:not(:disabled),.wyzwanie:active,.btn:active{transform:scale(.98)}
+.kafel:has(.ikona){display:grid;grid-template-columns:auto 1fr;column-gap:14px;align-items:center}
+.kafel .ikona{grid-row:span 2;font-style:normal;font-size:24px;line-height:1;width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:var(--acc-jasny)}
+.kafel--glowny .ikona{background:rgb(255 255 255/.22)}
+.kafel--glowny{background:linear-gradient(135deg,var(--acc),var(--acc2));border:0}
+
+.wyzwanie{border:0;background:linear-gradient(var(--karta),var(--karta)) padding-box,linear-gradient(135deg,var(--acc),var(--acc2)) border-box;border:2px solid transparent}
+.wyzwanie.zrobione{background:var(--ok-bg);border-color:var(--ok)}
+.seria{grid-template-columns:auto auto;align-items:center;column-gap:4px;padding:8px 12px}
+.seria>span{font-size:22px}
+.seria small{grid-column:1/-1}
+
+/* każdy dział ma swój kolor numeru (odcień z listy, kontrast sprawdzony na jasnym i ciemnym) */
+.dzialy li:nth-child(6n+1){--kol:#2563eb}.dzialy li:nth-child(6n+2){--kol:#7c3aed}.dzialy li:nth-child(6n+3){--kol:#be185d}
+.dzialy li:nth-child(6n+4){--kol:#c2410c}.dzialy li:nth-child(6n+5){--kol:#0f766e}.dzialy li:nth-child(6n){--kol:#0369a1}
+.dzial-nr{background:var(--kol,var(--acc));color:#fff}
+.dzial .pasek i{background:var(--kol,var(--acc))}
+.dzial .pasek--ok i{background:var(--ok)}
+
+.postep{height:10px}
+.postep i{background:linear-gradient(90deg,var(--acc),var(--acc2));transition:width .3s}
+.tresc{padding:18px 20px;background:var(--karta);border-radius:var(--r);box-shadow:var(--cien);font-size:21px}
+.pomoce{gap:6px}.pomoce .btn{border-radius:99px;padding:6px 12px;min-height:40px;box-shadow:none}
+.opcja b{font-weight:800}
+.btn{box-shadow:var(--cien)}
+.btn:not(.btn--jasny){background:linear-gradient(135deg,var(--acc),var(--acc2))}
+.wyjasnienie{box-shadow:var(--cien)}
+
+.procent{--p:0;width:150px;height:150px;margin:8px auto 12px;border-radius:50%;display:grid;place-items:center;
+	background:conic-gradient(var(--acc) calc(var(--p)*1%),var(--linia) 0);font-size:40px}
+.procent span{width:120px;height:120px;border-radius:50%;display:grid;place-items:center;background:var(--bg)}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.kafel:active,.dzial:active,.opcja:active,.wyzwanie:active,.btn:active{transform:none}}
